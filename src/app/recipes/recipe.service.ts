@@ -20,8 +20,7 @@ export class RecipeService {
     new Recipe(
       'Big Fat Burger',
       'Need to say more?!',
-      `https://media.istockphoto.com/photos/double-cheese-and-bacon-cheeseburger-picture-id511484502?k=6&m
-      =511484502&s=612x612&w=0&h=2d8oTGH_E7KHkd4TIdftWIxjLsBP3CfdF44zy65FD0o=`,
+      `https://sallysbakingaddiction.com/wp-content/uploads/2018/07/best-black-bean-burgers-2.jpg`,
       [
         new Ingredient('Buns', 2),
         new Ingredient('Meat', 1),
@@ -31,6 +30,10 @@ export class RecipeService {
 
   getRecipes() {
     return this.recipes.slice();  // return byValue recipes array not byRef
+  }
+  
+  getRecipe(index: number) {
+    return this.recipes[index];
   }
 
   addIngredientsToShoppingList(ingredients: Ingredient[]) {
